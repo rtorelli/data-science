@@ -1,0 +1,14 @@
+dat <- data.frame(
+  skills = factor(c("CS","Math","Stat","ML","Domain","Com","Data Viz"),           
+                  levels=c("Stat","ML","Data Viz","Com","Domain","CS","Math")),
+  scale = c(75, 50, 25, 25, 25, 25, 0))
+
+library(ggplot2)
+
+ggplot(data=dat, aes(x=skills, y=scale)) + 
+  geom_bar(fill="black", stat="identity") +
+  ylim(0, 100) +
+  xlab("Areas of Skill") +
+  ylab("Scale, %") +
+  ggtitle("Ryan's Profile Before CptS 483-04")
+	
